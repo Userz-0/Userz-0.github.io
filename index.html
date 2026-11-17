@@ -1,56 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yanawat | Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-    header { text-align: center; }
-    img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; }
-    h1, h2 { color: #2c3e50; }
-    h2 { border-bottom: 2px solid #3498db; padding-bottom: 4px; }
-    section { margin-bottom: 24px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yanawat | Portfolio</title>
+<style>
+:root{--bg:#111;--card:#1b1b1b;--text:#e8e8e8;--muted:#9a9a9a;--accent:#ff7a00;--line:#2a2a2a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1050px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(17,17,17,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{color:var(--accent);font-weight:800;font-size:1.3rem;letter-spacing:1px}
+.links{display:flex;gap:26px;font-size:.95rem;color:var(--muted)}
+.links a:hover{color:var(--accent)}
+.btn{display:inline-block;padding:10px 24px;border-radius:6px;background:var(--accent);color:#fff;font-weight:600;border:1px solid var(--accent)}
+.btn.ghost{background:transparent;color:var(--muted);border-color:#666}
+.btn:hover{opacity:.85}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:70px 0}
+.hero .hi{color:var(--muted);margin:0}
+.hero h2{margin:4px 0 12px;font-size:1.4rem;color:#ccc;font-weight:600}
+.hero h1{margin:0 0 20px;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--accent);line-height:1.1}
+.social{display:flex;gap:12px;margin-bottom:28px}
+.social a{width:36px;height:36px;border:1px solid #333;border-radius:50%;display:grid;place-items:center;font-size:.8rem;color:var(--muted)}
+.social a:hover{color:var(--accent);border-color:var(--accent)}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.stats{display:inline-flex;background:var(--card);border-radius:8px;padding:16px 8px}
+.stats div{padding:0 22px;border-left:1px solid #333}
+.stats div:first-child{border-left:0}
+.stats b{display:block;color:var(--accent);font-size:1.25rem}
+.stats span{font-size:.85rem;font-weight:600}
+.photo{justify-self:center;width:min(380px,80vw);aspect-ratio:1;border-radius:50%;background:var(--card);display:grid;place-items:center;overflow:hidden;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo .ini{font-size:5rem;font-weight:800;color:var(--accent)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h3{margin:0 0 24px;font-size:1.7rem}
+section h3 em{color:var(--accent);font-style:normal}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border-radius:10px;padding:22px;border:1px solid var(--line)}
+.card h4{margin:0 0 4px;color:var(--accent)}
+.card small{color:var(--muted)}
+.card p{margin:8px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{background:var(--card);border:1px solid #333;padding:6px 16px;border-radius:999px;font-size:.92rem}
+footer{text-align:center;color:var(--muted);padding:30px 0;border-top:1px solid var(--line);font-size:.9rem}
+@media(max-width:760px){.links{display:none}.hero{grid-template-columns:1fr;padding:40px 0}.photo{order:-1}.stats div{padding:0 12px}}
+</style>
 </head>
 <body>
-  <header>
-    <img src="profile.jpg" alt="My photo">
-    <h1>Yanawat Your-Surname</h1>
-    <p>Student ID: 6xxxxxxx<br>Second-year student, University of Phayao</p>
-  </header>
+<nav><div class="wrap">
+  <a class="logo" href="#home">YANAWAT</a>
+  <div class="links"><a href="#home">Home</a><a href="#about">About me</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#hobbies">Hobbies</a></div>
+  <a class="btn" href="#contact">Contact Me</a>
+</div></nav>
 
-  <section>
-    <h2>Education</h2>
-    <p>Bachelor's Degree in ..., University of Phayao (2025 - present)</p>
+<main class="wrap" id="home">
+  <div class="hero">
+    <div>
+      <p class="hi">Hi, I am</p>
+      <h2>Yanawat Surname</h2>
+      <h1>Computer & Data Science</h1>
+      <div class="social">
+        <a href="https://github.com/Userz-0" title="GitHub">GH</a>
+        <a href="#contact" title="Email">@</a>
+        <a href="#contact" title="LinkedIn">in</a>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#contact">Contact Me</a>
+        <a class="btn ghost" href="https://github.com/Userz-0">View GitHub</a>
+      </div>
+      <div class="stats">
+        <div><b>Year 2</b><span>University</span></div>
+        <div><b>1+</b><span>Year in Data &amp; CS</span></div>
+        <div><b>5+</b><span>Skills</span></div>
+      </div>
+    </div>
+    <div class="photo">
+      <span class="ini">Y</span>
+      <img src="profile.jpg" alt="Yanawat" onerror="this.remove()">
+    </div>
+  </div>
+
+  <section id="about">
+    <h3>About <em>me</em> &amp; Education</h3>
+    <div class="grid">
+      <div class="card"><h4>University of Phayao</h4><small>2025 – present</small><p>Bachelor’s Degree in Data Science. Student ID: 68027339. Second-year student with a foundation in computing and data.</p></div>
+      <div class="card"><h4>High School</h4><small>2021 – 2024</small><p>vocational education</p></div>
+    </div>
   </section>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li>Project / activity / part-time job</li>
-    </ul>
+  <section id="experience">
+    <h3><em>Experience</em></h3>
+    <div class="grid">
+      <div class="card"><h4>Project / Activity Title</h4><small>[Month Year]</small><p>Short description of what you did and what you learned.</p></div>
+      <div class="card"><h4>Part-time Job / Volunteer</h4><small>[Month Year]</small><p>Short description of your role and responsibilities.</p></div>
+    </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Basic programming, data analysis, Excel</li>
-    </ul>
+  <section id="skills">
+    <h3>Skills &amp; <em>Competencies</em></h3>
+    <p style="color:var(--muted);margin-top:-10px">Technical skills</p>
+    <div class="tags"><span>SQL</span><span>Basic Programming</span><span>Data Analysis</span><span>HTML &amp; CSS</span><span>Git &amp; GitHub</span><span>AI</span></div>
+    <p style="color:var(--muted);margin-top:28px">Competencies</p>
+    <div class="tags"><span>Teamwork</span><span>Problem Solving</span><span>Communication</span><span>Fast Learner</span></div>
   </section>
 
-  <section>
-    <h2>Competencies</h2>
-    <ul>
-      <li>Teamwork, problem solving, communication</li>
-    </ul>
+  <section id="hobbies">
+    <h3><em>Hobbies</em></h3>
+    <div class="tags"><span>Gaming</span><span>Music</span><span>Traveling</span></div>
   </section>
 
-  <section>
-    <h2>Hobbies</h2>
-    <ul>
-      <li>Gaming, music, traveling</li>
-    </ul>
+  <section id="contact">
+    <h3><em>Contact</em></h3>
+    <div class="grid">
+      <div class="card"><h4>Email</h4><p>kimitueiei@gmail.com</p></div>
+      <div class="card"><h4>GitHub</h4><p><a href="https://github.com/Userz-0">github.com/Userz-0</a></p></div>
+    </div>
   </section>
+</main>
+<footer>© 2026 Yanawat · University of Phayao</footer>
 </body>
 </html>
